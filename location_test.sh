@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# location_test.sh NGINX_CONF
+
 # Get conf
 NGINX_CONF=$1
 
