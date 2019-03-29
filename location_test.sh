@@ -42,5 +42,5 @@ for LOCATION in "${LOCATION_LIST[@]}" ; do
   OUTPUT_FILE="${SERVER_NAME}_${SSL_SERVER_PORT}_${LOCATION_FORMATED}.txt"
 
   # test url and save in /tmp/test_locations/
-  curl -Ls $URL  &> "${OUTPUT_DIR}/${OUTPUT_FILE}"
+  curl -Ls --connect-timeout 10 "https://$URL"  &> "${OUTPUT_DIR}/${OUTPUT_FILE}"
  done
